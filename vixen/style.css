@@ -1,0 +1,176 @@
+/*
+	Theme Name: Vixen
+	Description: Vixen is a easy to set up wordpress theme. Just install activate and enjoy!
+	Author: Muhammad Awais
+	Author URI: https://profile.html-5.me/?i=1
+	Version: 1.0.0
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+:root {
+  --heading-color: #1f2937;
+  --text-color: #1f2937;
+  --color-main: #007eff;
+  --color-accent: #ff5722;
+  --color-dark: #000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background: #f5f5f5;
+}
+body {
+  margin: 0 auto !important;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--text-color);
+  font-family: "Lexend", sans-serif;
+  max-width: 1920px;
+  background-color: white;
+  font-weight: 300;
+  position: relative;
+}
+body,
+html {
+  overflow-x: hidden;
+  zoom: 100%;
+}
+h1,
+.h1 {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 52px;
+  color: var(--heading-color);
+}
+h2,
+.h2 {
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  color: var(--heading-color);
+}
+h3,
+.h3 {
+  font-weight: 500;
+  line-height: 46px;
+  font-size: 32px;
+  color: var(--heading-color);
+}
+h4,
+.h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--heading-color);
+}
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+.btn, .button {
+  display: block;
+  color: white;
+  width: fit-content;
+  background-color: var(--color-main);
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: .3s color, .3s background-color;
+  border: 1px solid var(--color-main);
+}
+.btn:hover, .button:hover {
+  color: var(--color-main);
+  background-color: white;
+
+}
+
+/*
+ *  Header
+ */
+header{
+  padding: 20px 0;
+  box-shadow: 0 0 10px #0003;
+}
+header .row .col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-navigation-menu{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.header-navigation-menu .menu-item{
+  display: flex;
+  align-items: center;
+}
+.header-navigation-menu .menu-item-has-children{
+  position: relative;
+  padding-right: 20px;
+
+}
+.header-navigation-menu .menu-item-has-children:before{
+  position: absolute;
+  right: 0;
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  font-size: 16px;
+  transition: .3s;
+}
+.header-navigation-menu .sub-menu {
+  position: absolute;
+  top: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  box-shadow: 0 0 5px #0002;
+  margin: 0;
+  padding: 0;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: .3s opacity, .3s visibility;
+}
+.header-navigation-menu .sub-menu .menu-item a{
+  display: block;
+  padding: 15px 30px;
+}
+.header-navigation-menu .menu-item-has-children:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+}
+.header-navigation-menu .menu-item-has-children:hover:before{
+  rotate:180deg
+}
+
+@media (min-width: 1024px) {
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 600px) {
+}
+@media (max-width: 500px) {
+}
