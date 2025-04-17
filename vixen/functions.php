@@ -123,6 +123,29 @@ function vixen_customize_register($wp_customize) {
 
 add_action('customize_register', 'vixen_customize_register');
 
+
+/*
+ * Theme Custom File Types Upload Support
+ */
+function vixen_allow_custom_upload_mimes($mimes) {
+    $mimes['webp'] = 'image/webp';
+
+    $mimes['svg'] = 'image/svg+xml';
+
+    return $mimes;
+}
+add_filter('upload_mimes', 'vixen_allow_custom_upload_mimes');
+
+function vixen_fix_svg_display() {
+    echo '<style>
+        .attachment-266x266, .thumbnail img[src$=".svg"] {
+            width: 100% !important;
+            height: auto !important;
+        }
+    </style>';
+}
+add_action('admin_head', 'vixen_fix_svg_display');
+
 /*
  * Theme Styles and Scripts
  */
