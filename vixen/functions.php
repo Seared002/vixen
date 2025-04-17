@@ -4,6 +4,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+/*
+ * Theme Files
+ */
+
+require get_template_directory() . '/inc/theme_options.php';
+
+/*
+ * Setup
+ */
 function vixen_setup() {
 
     if ( apply_filters( 'vixen_register_menus', true ) ) {
@@ -65,6 +74,7 @@ function vixen_setup() {
     }
 }
 add_action( 'after_setup_theme', 'vixen_setup' );
+
 
 /* 
  * Register Customization Options
