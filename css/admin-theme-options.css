@@ -1,0 +1,46 @@
+/* Admin Theme Options Styling */
+
+.vixen-social-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.vixen-social-row input[type="text"] {
+    min-width: 200px;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.vixen-social-row button.remove-social {
+    background: #dc3232;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.vixen-social-row button.remove-social:hover {
+    background: #a00000;
+}
+
+#add-social-link {
+    margin-top: 10px;
+}
+
+#vixen-social-links {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+img[id$="_preview"] {
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    max-width: 150px;
+    border-radius: 3px;
+    display: block;
+}
